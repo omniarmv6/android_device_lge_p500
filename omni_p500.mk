@@ -61,8 +61,12 @@ $(call inherit-product, vendor/lge/p500/p500-vendor.mk)
 $(call inherit-product, device/lge/msm7x27-common/device.mk)
 $(call inherit-product, vendor/lge/msm7x27-common/msm7x27-common-vendor-blobs.mk)
 
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
 # Overrides
-PRODUCT_NAME := p500
+PRODUCT_NAME := omni_p500
 PRODUCT_DEVICE := p500
 PRODUCT_MODEL := LG-P500
 PRODUCT_MANUFACTURER := LGE
