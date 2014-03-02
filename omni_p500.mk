@@ -62,17 +62,16 @@ $(call inherit-product, device/lge/msm7x27-common/device.mk)
 $(call inherit-product, vendor/lge/msm7x27-common/msm7x27-common-vendor-blobs.mk)
 
 # Inherit from our custom product configuration
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, device/mdpi-common/mdpi.mk)
 
 # Overrides
 PRODUCT_NAME := omni_p500
 PRODUCT_DEVICE := p500
 PRODUCT_MODEL := LG-P500
 PRODUCT_MANUFACTURER := LGE
-
-PRODUCT_AAPT_PREF_CONFIG := mdpi
-$(call inherit-product, device/mdpi-common/mdpi.mk)
 
 # P500 overlays (Most specific last)
 DEVICE_PACKAGE_OVERLAYS += device/lge/p500/overlay
