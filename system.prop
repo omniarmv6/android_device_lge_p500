@@ -26,3 +26,4 @@ ro.opengles.version=131072
 # Screen density
 ro.sf.lcd_density=160
 
+# OTA TEST
